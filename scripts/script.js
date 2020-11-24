@@ -3,7 +3,7 @@
 var numberA = document.querySelector("#numberA");
 var numberB = document.querySelector("#numberB");
 
-// Outros Inputs
+// Inputs - resultados
 
 var sum = document.querySelector("#sum");
 var sub1 = document.querySelector("#sub1");
@@ -33,6 +33,10 @@ function getNumberA() {
   function getValueA(event) {
     if (event.key === "Enter") {
       console.log(numberA.value);
+
+      // Focus input number B
+
+      numberB.focus();
 
       // Chamar funções
 
@@ -127,7 +131,7 @@ function dividersNumberA(numberA) {
   dividersA.value = allDividers
 }
 
-// TO DO: tirar vírgula
+// TO DO: tirar vírgula e mostrar quantidade de divisores (3)
 
 function dividersNumberB(numberB) {
 
@@ -159,7 +163,7 @@ function factorialNumberA(numberA) {
 function factorialNumberB(numberB) {
   
   var result = 1;
-  
+
   for (var i = numberB; i >= 1; i--) {
     result *= i;
   }
