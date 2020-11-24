@@ -37,4 +37,48 @@
   width: 500px;
 }
 
-/* TO DO: responsivo */
+@media (max-width: 1300px) {
+
+.container-input-results, .container-data {
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+}
+
+@media (max-width: 700px) {
+
+.input.data {
+max-width: 400px;
+}
+
+.input {
+max-width: 300px;
+}
+
+}
+
+@media (max-width: 500px) {
+
+.input.data {
+max-width: 300px;
+}
+
+.input {
+max-width: 200px;
+}
+
+}
+
+@media (max-width: 350px) {
+
+.input.data {
+max-width: 200px;
+}
+
+.input {
+max-width: 200px;
+}
+
+}
