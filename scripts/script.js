@@ -32,7 +32,13 @@ function getNumberA() {
 
   function getValueA(event) {
     if (event.key === "Enter") {
-      console.log(numberA.value)
+      console.log(numberA.value);
+
+      // Chamar funções
+
+      squaredNumberA(numberA.value);
+      dividersNumberA(numberA.value);
+      factorialNumberA(numberA.value);
     }
   }
 }
@@ -51,6 +57,10 @@ function getNumberB() {
       multipleNumbers(numberA.value, numberB.value);
       division1Numbers(numberA.value, numberB.value);
       division2Numbers(numberA.value, numberB.value);
+
+      squaredNumberB(numberB.value);
+      dividersNumberB(numberB.value);
+      factorialNumberB(numberB.value);
     }
   }
 }
@@ -91,4 +101,68 @@ function division2Numbers(numberA, numberB) {
   div2.value = parseInt(numberB) / parseInt(numberA);
 
   // TO DO: toFixed(2)
+}
+
+function squaredNumberA(numberA) {
+  squaredA.value = Math.pow(numberA, 2);
+}
+
+function squaredNumberB(numberB) {
+  squaredB.value = Math.pow(numberB, 2);
+}
+
+function dividersNumberA(numberA) {
+
+  var allDividers = ""
+
+  // Percorrer os números e avaliar se % é 0
+
+  for (var i = 0; i <= numberA; i++) {
+
+    if (numberA % i == 0) {
+      allDividers += (i.toString() + ", ")
+    }
+  }
+
+  dividersA.value = allDividers
+}
+
+// TO DO: tirar vírgula
+
+function dividersNumberB(numberB) {
+
+  var allDividers = ""
+
+  for (var i = 0; i <= numberB; i++) {
+
+    if (numberB % i == 0) {
+      allDividers += (i.toString() + ", ")
+    }
+  }
+
+  dividersB.value = allDividers
+}
+
+function factorialNumberA(numberA) {
+
+  var result = 1;
+
+  // For: numberA até 1. Incrementar multiplicação
+
+  for (var i = numberA; i >= 1; i--) {
+    result *= i;
+  }
+
+  factorialA.value = result;
+}
+
+function factorialNumberB(numberB) {
+  
+  var result = 1;
+  
+  for (var i = numberB; i >= 1; i--) {
+    result *= i;
+  }
+
+  factorialB.value = result;
 }
