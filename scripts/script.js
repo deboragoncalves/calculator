@@ -113,34 +113,43 @@ function squaredNumberB(numberB) {
 
 function dividersNumberA(numberA) {
 
-  var allDividers = ""
+  var allDividers = []
 
   // Percorrer os números e avaliar se % é 0
+  // Espaços entre os elementos do array. Se for o primeiro elemento, sem espaço
 
   for (var i = 0; i <= numberA; i++) {
 
     if (numberA % i == 0) {
-      allDividers += (i.toString() + ", ")
+		if (allDividers.length == 0) {
+			allDividers.push(i.toString());
+		} else {
+			allDividers.push(" " + i.toString());
+		}
     }
   }
 
-  dividersA.value = allDividers
+	var numbersDividers = "(" + allDividers.length + ")";
+  dividersA.value = allDividers.toString() + " " + numbersDividers;
 }
-
-// TO DO: tirar vírgula
 
 function dividersNumberB(numberB) {
 
-  var allDividers = ""
+  var allDividers = []
 
   for (var i = 0; i <= numberB; i++) {
 
     if (numberB % i == 0) {
-      allDividers += (i.toString() + ", ")
-    }
+		if (allDividers.length == 0) {
+			allDividers.push(i.toString());
+		} else {
+			allDividers.push(" " + i.toString());
+		}
+	}
   }
 
-  dividersB.value = allDividers
+	var numbersDividers = "(" + allDividers.length + ")";
+  dividersB.value = allDividers.toString() + " " + numbersDividers;
 }
 
 function factorialNumberA(numberA) {
