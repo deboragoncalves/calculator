@@ -6,91 +6,117 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <h1>Super Calculadora</h1>
-    <div class="container-data">
-      <div class="container-input">
-        <label for="numberA">Primeiro número (A):</label>
-        <input type="number" id="numberA" name="numberA" class="input" />
-      </div>
-      <div class="container-input">
-        <label for="numberB">Segundo número (B):</label>
-        <input type="number" id="numberB" name="numberB" class="input"  />
-      </div>
-    </div>
-    <div class="container-results">
-      <h2>Cálculos</h2>
-      <div class="container-input-results">
+    <div class="container">
+      <h1>Super Calculadora</h1>
+      <div class="container-data">
         <div class="container-input">
-          <label for="sum">Soma (a + b):</label>
-          <input type="number" id="sum" name="sum" class="input" readonly />
+          <label class="label" for="numberA">Primeiro número (A):</label>
+          <input type="number" id="numberA" name="numberA" class="input data" />
         </div>
         <div class="container-input">
-          <label for="sub1">Subtração 1 (a - b):</label>
-          <input type="number" id="sub1" name="sub1" class="input" readonly />
-        </div>
-        <div class="container-input">
-          <label for="sub2">Subtração 2 (b - a):</label>
-          <input type="number" id="sub2" name="sub2" class="input" readonly />
+          <label class="label" for="numberB">Segundo número (B):</label>
+          <input type="number" id="numberB" name="numberB" class="input data" />
         </div>
       </div>
-      <div class="container-input-results">
-        <div class="container-input">
-          <label for="multiplication">Multiplicação (a x b):</label>
-          <input
-            type="number"
-            id="multiplication"
-            name="multiplication"
-            class="input"
-            readonly
-          />
+      <div class="container-results">
+        <h2>Cálculos</h2>
+        <div class="container-input-results">
+          <div class="container-input">
+            <label class="label" for="sum">Soma (a + b):</label>
+            <input type="number" id="sum" name="sum" class="input" readonly />
+          </div>
+          <div class="container-input">
+            <label class="label" for="sub1">Subtração 1 (a - b):</label>
+            <input type="number" id="sub1" name="sub1" class="input" readonly />
+          </div>
+          <div class="container-input">
+            <label class="label" for="sub2">Subtração 2 (b - a):</label>
+            <input type="number" id="sub2" name="sub2" class="input" readonly />
+          </div>
         </div>
-        <div class="container-input">
-          <label for="div1">Divisão 1 (a / b):</label>
-          <input type="number" id="div1" name="div1" class="input" readonly />
+        <div class="container-input-results">
+          <div class="container-input">
+            <label class="label" for="multiplication">Multiplicação (a x b):</label>
+            <input
+              type="number"
+              id="multiplication"
+              name="multiplication"
+              class="input"
+              readonly
+            />
+          </div>
+          <div class="container-input">
+            <label class="label" for="div1">Divisão 1 (a / b):</label>
+            <input type="number" id="div1" name="div1" class="input" readonly />
+          </div>
+          <div class="container-input">
+            <label class="label" for="div2">Divisão 2 (b / a):</label>
+            <input type="number" id="div2" name="div2" class="input" readonly />
+          </div>
         </div>
-        <div class="container-input">
-          <label for="div2">Divisão 2 (b / a):</label>
-          <input type="number" id="div2" name="div2" class="input" readonly />
+        <div class="container-input-results">
+          <div class="container-input">
+            <label class="label" for="squaredA">Quadrado de a (a²):</label>
+            <input
+              type="number"
+              id="squaredA"
+              name="squaredA"
+              class="input"
+              readonly
+            />
+          </div>
+          <div class="container-input">
+            <label class="label" for="squaredB">Quadrado de b (b²):</label>
+            <input
+              type="number"
+              id="squaredB"
+              name="squaredB"
+              class="input"
+              readonly
+            />
+          </div>
+          <div class="container-input">
+            <label class="label" for="dividersA">Divisores inteiros de a:</label>
+            <input
+              type="number"
+              id="dividersA"
+              name="dividersA"
+              class="input"
+              readonly
+            />
+          </div>
         </div>
-      </div>
-      <div class="container-input-results">
-        <div class="container-input">
-          <label for="squaredA">Quadrado de a (a²):</label>
-          <input type="number" id="squaredA" name="squaredA" class="input" readonly />
-        </div>
-        <div class="container-input">
-          <label for="squaredB">Quadrado de b (b²):</label>
-          <input type="number" id="squaredB" name="squaredB" class="input" readonly />
-        </div>
-        <div class="container-input">
-          <label for="dividersA">Divisores inteiros de a:</label>
-          <input type="number" id="dividersA" name="dividersA" class="input" readonly />
-        </div>
-      </div>
-      <div class="container-input-results">
-        <div class="container-input">
-          <label for="dividersB">Divisores inteiros de b:</label>
-          <input type="number" id="dividersB" name="dividersB" class="input" readonly />
-        </div>
-        <div class="container-input">
-          <label for="factorialA">Fatorial de a (a!):</label>
-          <input
-            type="number"
-            id="factorialA"
-            name="factorialA"
-            class="input"
-            readonly
-          />
-        </div>
-        <div class="container-input">
-          <label for="factorialB">Fatorial de b (b!):</label>
-          <input
-            type="number"
-            id="factorialB"
-            name="factorialB"
-            class="input"
-            readonly
-          />
+        <div class="container-input-results">
+          <div class="container-input">
+            <label class="label" for="dividersB">Divisores inteiros de b:</label>
+            <input
+              type="number"
+              id="dividersB"
+              name="dividersB"
+              class="input"
+              readonly
+            />
+          </div>
+          <div class="container-input">
+            <label class="label" for="factorialA">Fatorial de a (a!):</label>
+            <input
+              type="number"
+              id="factorialA"
+              name="factorialA"
+              class="input"
+              readonly
+            />
+          </div>
+          <div class="container-input">
+            <label class="label" for="factorialB">Fatorial de b (b!):</label>
+            <input
+              type="number"
+              id="factorialB"
+              name="factorialB"
+              class="input"
+              readonly
+            />
+          </div>
         </div>
       </div>
     </div>

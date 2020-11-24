@@ -1,0 +1,38 @@
+* {
+  font-family: Arial;
+  color: gray;
+}
+
+.container, .container-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-input-results, .container-data {
+  display: flex;
+}
+
+.container-input {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+
+.label {
+  margin: 0 15px;
+}
+
+.input {
+  border-bottom: 2.3px solid gray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 400px;
+  margin: 20px 15px;
+}
+
+.input.data {
+  width: 500px;
+}
