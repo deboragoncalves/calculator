@@ -3,21 +3,6 @@
 var numberA = document.querySelector("#numberA");
 var numberB = document.querySelector("#numberB");
 
-// Inputs - resultados
-
-var sum = document.querySelector("#sum");
-var sub1 = document.querySelector("#sub1");
-var sub2 = document.querySelector("#sub2");
-var multiplication = document.querySelector("#multiplication");
-var div1 = document.querySelector("#div1");
-var div2 = document.querySelector("#div2");
-var squaredA = document.querySelector("#squaredA");
-var squaredB = document.querySelector("#squaredB");
-var dividersA = document.querySelector("#dividersA");
-var dividersB = document.querySelector("#dividersB");
-var factorialA = document.querySelector("#factorialA");
-var factorialB = document.querySelector("#factorialB");
-
 function start() {
   getNumberA();
   getNumberB();
@@ -71,6 +56,8 @@ function getNumberB() {
 
 function sumNumbers(numberA, numberB) {
 
+  var sum = document.querySelector("#sum");
+
   // String para int
 
   sum.value = parseInt(numberA) + parseInt(numberB);
@@ -78,11 +65,15 @@ function sumNumbers(numberA, numberB) {
 
 function subtration1Numbers(numberA, numberB) {
 
+  var sub1 = document.querySelector("#sub1");
+
   sub1.value = parseInt(numberA) - parseInt(numberB);
 
 }
 
 function subtration2Numbers(numberA, numberB) {
+
+  var sub2 = document.querySelector("#sub2");
 
   sub2.value = parseInt(numberB) - parseInt(numberA);
 
@@ -90,11 +81,17 @@ function subtration2Numbers(numberA, numberB) {
 
 function multipleNumbers(numberA, numberB) {
 
+  var multiplication = document.querySelector("#multiplication");
+
   multiplication.value = parseInt(numberA) * parseInt(numberB);
 
 }
 
+// TO DO: divisão por 0.
+
 function division1Numbers(numberA, numberB) {
+
+  var div1 = document.querySelector("#div1");
 
   div1.value = parseInt(numberA) / parseInt(numberB);
 
@@ -102,80 +99,109 @@ function division1Numbers(numberA, numberB) {
 
 function division2Numbers(numberA, numberB) {
 
+  var div2 = document.querySelector("#div2");
+
   div2.value = parseInt(numberB) / parseInt(numberA);
 
   // TO DO: toFixed(2)
 }
 
 function squaredNumberA(numberA) {
+
+  var squaredA = document.querySelector("#squaredA");
+
   squaredA.value = Math.pow(numberA, 2);
 }
 
 function squaredNumberB(numberB) {
+
+  var squaredB = document.querySelector("#squaredB");
+
   squaredB.value = Math.pow(numberB, 2);
 }
 
 function dividersNumberA(numberA) {
 
+  var dividersA = document.querySelector("#dividersA");
+
   var allDividers = []
 
   // Percorrer os números e avaliar se % é 0
-  // Espaços entre os elementos do array. Se for o primeiro elemento, sem espaço
 
   for (var i = 0; i <= numberA; i++) {
 
+    // Transformar cada item numa String
+
     if (numberA % i == 0) {
-		  if (allDividers.length == 0) {
-			  allDividers.push(i.toString());
-		  } else {
-			  allDividers.push(" " + i.toString());
-		  }
+			allDividers.push(i.toString());
     }
   }
 
+  // Join: separa por virgula
+
 	var numbersDividers = "(" + allDividers.length + ")";
-  dividersA.value = allDividers.toString() + " " + numbersDividers;
+  dividersA.value = allDividers.join(", ") + " " + numbersDividers;
 }
 
 function dividersNumberB(numberB) {
+
+  var dividersB = document.querySelector("#dividersB");
 
   var allDividers = []
 
   for (var i = 0; i <= numberB; i++) {
 
     if (numberB % i == 0) {
-		  if (allDividers.length == 0) {
-			  allDividers.push(i.toString());
-		  } else {
-			  allDividers.push(" " + i.toString());
-		  }
-	}
+			allDividers.push(i.toString());
+    }
   }
 
 	var numbersDividers = "(" + allDividers.length + ")";
-  dividersB.value = allDividers.toString() + " " + numbersDividers;
+  dividersB.value = allDividers.join(", ") + " " + numbersDividers;
 }
 
+// TO DO: formatar número > 1000
+
 function factorialNumberA(numberA) {
+
+  var factorialA = document.querySelector("#factorialA");
 
   var result = 1;
 
   // For: numberA até 1. Incrementar multiplicação
+  // Condição maior que 21
 
-  for (var i = numberA; i >= 1; i--) {
-    result *= i;
+  if (numberA < 22) {
+
+    for (var i = numberA; i >= 1; i--) {
+      result *= i;
+    }
+  
+    // String: input fatorial é text
+
+    factorialA.value = result.toString();
+
+  } else {
+    factorialA.value = "Número muito grande"
   }
 
-  factorialA.value = result;
 }
 
 function factorialNumberB(numberB) {
+
+  var factorialB = document.querySelector("#factorialB");
   
   var result = 1;
 
-  for (var i = numberB; i >= 1; i--) {
-    result *= i;
-  }
+  if (numberB < 22) {
 
-  factorialB.value = result;
+    for (var i = numberB; i >= 1; i--) {
+      result *= i;
+    }
+  
+    factorialB.value = result.toString();
+
+  } else {
+    factorialB.value = "Número muito grande"
+  }
 }
