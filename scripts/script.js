@@ -1,3 +1,7 @@
+// TO DO: Eliminar warnings console
+// TO DO: usar função recursiva fatorial
+// TO DO: formatar número > 1000
+
 // Inputs numbers
 
 var numberA = document.querySelector("#numberA");
@@ -178,8 +182,6 @@ function dividersNumberB(numberB) {
 	var numbersDividers = "(" + allDividers.length + ")";
   dividersB.value = allDividers.join(", ") + " " + numbersDividers;
 }
-
-// TO DO: formatar número > 1000
 
 function factorialNumberA(numberA) {
 
