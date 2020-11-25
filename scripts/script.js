@@ -87,13 +87,23 @@ function multipleNumbers(numberA, numberB) {
 
 }
 
-// TO DO: divisão por 0.
-
 function division1Numbers(numberA, numberB) {
 
   var div1 = document.querySelector("#div1");
 
-  div1.value = parseInt(numberA) / parseInt(numberB);
+  if (numberB != 0) {
+
+    var result = parseInt(numberA) / parseInt(numberB);
+
+    // Input text - toString()
+
+    div1.value = result.toFixed(2).toString();
+
+  } else {
+
+    div1.value = "Impossível realizar divisão por 0."
+
+  }
 
 }
 
@@ -101,9 +111,18 @@ function division2Numbers(numberA, numberB) {
 
   var div2 = document.querySelector("#div2");
 
-  div2.value = parseInt(numberB) / parseInt(numberA);
+  if (numberA != 0) {
 
-  // TO DO: toFixed(2)
+    var result = parseInt(numberB) / parseInt(numberA);
+
+    div2.value = result.toFixed(2).toString();
+
+  } else {
+
+    div2.value = "Impossível realizar divisão por 0."
+
+  }
+
 }
 
 function squaredNumberA(numberA) {
